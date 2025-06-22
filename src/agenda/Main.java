@@ -65,13 +65,13 @@ public class Main {
                 } else if (op == 3) {
                     agenda.listarTodos();
 
-                    //BUSCAR CONTATO
+                    // BUSCAR CONTATO
                 } else if (op == 4) {
                     System.out.print("Digite o nome para busca: ");
                     Contato c = agenda.buscarPorNome(sc.nextLine());
                     System.out.println(c != null ? c : "Contato não encontrado.");
 
-                    //EDITAR CONTATO
+                    // EDITAR CONTATO
                 } else if (op == 5) {
                     System.out.print("Nome do contato a editar: ");
                     String nome = sc.nextLine();
@@ -150,7 +150,7 @@ public class Main {
                     }
                 }
 
-                //REMOÇÃO DO CONTATO
+                // REMOÇÃO DO CONTATO
                 else if (op == 6) {
                     System.out.print("Nome do contato a remover: ");
                     if (agenda.removerContato(sc.nextLine())) {
@@ -159,6 +159,8 @@ public class Main {
                         System.out.println("Contato não encontrado na lista.");
                     }
 
+                } else {
+                    System.out.println("Opção inválida. Por favor, escolha uma opção válida do menu.");
                 }
             } catch (Exception e) {
                 System.out.println("Ocorreu um erro: " + e.getMessage());
@@ -167,7 +169,7 @@ public class Main {
         sc.close();
     }
 
-    //MÉTODO lerInteiro()
+    // MÉTODO lerInteiro()
     public static int lerInteiro(Scanner sc, String mensagem) {
         int numero;
         while (true) {
